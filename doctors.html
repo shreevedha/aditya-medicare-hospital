@@ -23,6 +23,25 @@
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
+  <!-- SEO JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    "name": "Aditya Medicare Hospitals",
+    "url": "https://aditya-medicare-hospital.vercel.app",
+    "logo": "https://aditya-medicare-hospital.vercel.app/images/Hospital-logo.png",
+    "telephone": "0863-294-4444",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kovelamudivari St, Suryaraopeta",
+      "addressLocality": "Guntur",
+      "addressRegion": "AP",
+      "postalCode": "522002",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -69,7 +88,7 @@
   <div class="mobile-drawer" id="mobile-drawer">
     <div class="mobile-drawer-header">
       <div class="brand-title" style="font-size: 1.1rem;">Aditya Medicare</div>
-      <button class="mobile-drawer-close" id="mobile-drawer-close">✕</button>
+      <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close navigation menu">✕</button>
     </div>
     <ul class="mobile-nav-links">
       <li><a href="index.html">Home</a></li>
@@ -94,7 +113,7 @@
     <div class="container">
       <div class="section-header" style="margin-bottom: 20px;">
         <span class="section-tag">Find Your Specialist</span>
-        <h1 class="section-title">Our Expert Medical Team</h1>
+        <h1 class="section-title">Our Doctors & Medical Specialists in Guntur</h1>
         <p class="section-subtitle">Board-certified senior consultants, surgeons & critical care specialists in Guntur.</p>
       </div>
     </div>
@@ -105,26 +124,296 @@
     <div class="container">
       <div class="doctor-filter-bar">
         <div class="search-input-wrap">
+          <label for="doctor-search-input" class="sr-only">Search doctor by name, qualification, department or treatment</label>
           <span class="search-icon">🔍</span>
           <input type="text" id="doctor-search-input" placeholder="Search doctor by name, qualification, department or treatment..." />
         </div>
         <div class="filter-pills" id="filter-pills-container">
-          <!-- Filter pills injected by script.js -->
+          <!-- Filter pills dynamically initialized by script.js -->
         </div>
       </div>
 
       <div class="doctors-grid" id="doctors-grid-container">
-        <!-- Doctor cards injected by script.js -->
+        <!-- 36 PRE-RENDERED DOCTOR CARDS FOR INSTANT SEO & ACCESSIBILITY -->
+        <div class="doctor-card doctor-card-horizontal">
+          <div class="doctor-card-main">
+            <div class="doctor-photo-col">
+              <div class="doctor-photo-wrap">
+                <img src="images/doctors/krishna-sravanth.jpg" alt="Dr. Krishna Sravanth Pakanati - Chief Consultant Orthopedic & Joint Replacement Surgeon" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
+              </div>
+              <div class="doctor-opd-badge-below"><span class="opd-dot"></span> OPD Mon - Sat</div>
+            </div>
+            <div class="doctor-details-wrap">
+              <div class="doctor-meta-header"><span class="doctor-dept-badge">Orthopedics</span></div>
+              <h3 class="doctor-name">Dr. Krishna Sravanth Pakanati</h3>
+              <div class="doctor-qualification">MBBS, DNB Orthopedics, MCh Ortho, FJR, FSS</div>
+              <div class="doctor-designation">Chief Consultant Orthopedic & Joint Replacement Surgeon</div>
+              <div class="doctor-treatments">
+                <span class="treatment-tag">MISSO Robotic Knee</span>
+                <span class="treatment-tag">Joint Replacement</span>
+                <span class="treatment-tag">Arthroscopy</span>
+              </div>
+            </div>
+          </div>
+          <div class="doctor-card-footer">
+            <button class="btn btn-primary doctor-card-action" data-open-modal="true" data-doctor="Dr. Krishna Sravanth Pakanati" data-department="Orthopedics">
+              <span>📅 Book Appointment</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="doctor-card doctor-card-horizontal">
+          <div class="doctor-card-main">
+            <div class="doctor-photo-col">
+              <div class="doctor-photo-wrap">
+                <img src="images/doctors/ramakoteswara-rao.jpg" alt="Dr. Ramakoteswara Rao K - Senior Consultant Orthopaedic Surgeon" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
+              </div>
+              <div class="doctor-opd-badge-below"><span class="opd-dot"></span> OPD Mon - Sat</div>
+            </div>
+            <div class="doctor-details-wrap">
+              <div class="doctor-meta-header"><span class="doctor-dept-badge">Orthopedics</span></div>
+              <h3 class="doctor-name">Dr. Ramakoteswara Rao K</h3>
+              <div class="doctor-qualification">D Ortho, Fellowship in Arthroplasty and Arthroscopy</div>
+              <div class="doctor-designation">Senior Consultant Orthopaedic Surgeon</div>
+              <div class="doctor-treatments">
+                <span class="treatment-tag">Knee & Hip Replacement</span>
+                <span class="treatment-tag">Arthroscopy</span>
+                <span class="treatment-tag">Joint Pain Care</span>
+              </div>
+            </div>
+          </div>
+          <div class="doctor-card-footer">
+            <button class="btn btn-primary doctor-card-action" data-open-modal="true" data-doctor="Dr. Ramakoteswara Rao K" data-department="Orthopedics">
+              <span>📅 Book Appointment</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="doctor-card doctor-card-horizontal">
+          <div class="doctor-card-main">
+            <div class="doctor-photo-col">
+              <div class="doctor-photo-wrap">
+                <img src="images/doctors/sai-krishna-katakam.jpeg" alt="Dr. Sai Krishna Katakam - Consultant Surgical Gastroenterologist" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
+              </div>
+              <div class="doctor-opd-badge-below"><span class="opd-dot"></span> OPD Mon - Sat</div>
+            </div>
+            <div class="doctor-details-wrap">
+              <div class="doctor-meta-header"><span class="doctor-dept-badge">Gastroenterology</span></div>
+              <h3 class="doctor-name">Dr. Sai Krishna Katakam</h3>
+              <div class="doctor-qualification">MBBS, MS, MCh (SGPGIMS Lucknow)</div>
+              <div class="doctor-designation">Consultant Surgical Gastroenterologist & GI Onco-surgeon</div>
+              <div class="doctor-treatments">
+                <span class="treatment-tag">Laparoscopic GI Surgery</span>
+                <span class="treatment-tag">HPB & Liver Care</span>
+                <span class="treatment-tag">GI Onco-surgery</span>
+              </div>
+            </div>
+          </div>
+          <div class="doctor-card-footer">
+            <button class="btn btn-primary doctor-card-action" data-open-modal="true" data-doctor="Dr. Sai Krishna Katakam" data-department="Gastroenterology">
+              <span>📅 Book Appointment</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="doctor-card doctor-card-horizontal">
+          <div class="doctor-card-main">
+            <div class="doctor-photo-col">
+              <div class="doctor-photo-wrap">
+                <img src="images/doctors/raghu-sarath.jpg" alt="Dr. Raghu Sarath Punukollu - Consultant Urologist and Andrologist" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
+              </div>
+              <div class="doctor-opd-badge-below"><span class="opd-dot"></span> OPD Mon - Sat</div>
+            </div>
+            <div class="doctor-details-wrap">
+              <div class="doctor-meta-header"><span class="doctor-dept-badge">Urology</span></div>
+              <h3 class="doctor-name">Dr. Raghu Sarath Punukollu</h3>
+              <div class="doctor-qualification">MBBS, DNB, MCh Urology</div>
+              <div class="doctor-designation">Consultant Urologist, Reconstructive Surgeon & Andrologist</div>
+              <div class="doctor-treatments">
+                <span class="treatment-tag">Laser Stone Removal (RIRS)</span>
+                <span class="treatment-tag">Prostate Surgery</span>
+                <span class="treatment-tag">Andrology</span>
+              </div>
+            </div>
+          </div>
+          <div class="doctor-card-footer">
+            <button class="btn btn-primary doctor-card-action" data-open-modal="true" data-doctor="Dr. Raghu Sarath Punukollu" data-department="Urology">
+              <span>📅 Book Appointment</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="doctor-card doctor-card-horizontal">
+          <div class="doctor-card-main">
+            <div class="doctor-photo-col">
+              <div class="doctor-photo-wrap">
+                <img src="images/doctors/dr-guttikonda.jpeg" alt="Dr. Guttikonda Bhanu Vijay - Consultant Interventional Cardiologist" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
+              </div>
+              <div class="doctor-opd-badge-below"><span class="opd-dot"></span> OPD Mon - Sat</div>
+            </div>
+            <div class="doctor-details-wrap">
+              <div class="doctor-meta-header"><span class="doctor-dept-badge">Cardiology</span></div>
+              <h3 class="doctor-name">Dr. Guttikonda Bhanu Vijay</h3>
+              <div class="doctor-qualification">MBBS, MD General Medicine, DM Cardiology</div>
+              <div class="doctor-designation">Consultant Interventional Cardiologist</div>
+              <div class="doctor-treatments">
+                <span class="treatment-tag">Angioplasty & Stenting</span>
+                <span class="treatment-tag">Cath Lab Interventions</span>
+                <span class="treatment-tag">Heart Failure Care</span>
+              </div>
+            </div>
+          </div>
+          <div class="doctor-card-footer">
+            <button class="btn btn-primary doctor-card-action" data-open-modal="true" data-doctor="Dr. Guttikonda Bhanu Vijay" data-department="Cardiology">
+              <span>📅 Book Appointment</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="doctor-card doctor-card-horizontal">
+          <div class="doctor-card-main">
+            <div class="doctor-photo-col">
+              <div class="doctor-photo-wrap">
+                <img src="images/doctors/dr-viswa-jyothi.jpeg" alt="Dr. Viswa Jyothi Yakkala - Consultant Neurologist" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
+              </div>
+              <div class="doctor-opd-badge-below"><span class="opd-dot"></span> OPD Mon - Sat</div>
+            </div>
+            <div class="doctor-details-wrap">
+              <div class="doctor-meta-header"><span class="doctor-dept-badge">Neurology</span></div>
+              <h3 class="doctor-name">Dr. Viswa Jyothi Yakkala</h3>
+              <div class="doctor-qualification">MBBS, MD, DM Neurology</div>
+              <div class="doctor-designation">Consultant Neurologist & Stroke Specialist</div>
+              <div class="doctor-treatments">
+                <span class="treatment-tag">Acute Stroke Care</span>
+                <span class="treatment-tag">Epilepsy Management</span>
+                <span class="treatment-tag">Migraine & Headache</span>
+              </div>
+            </div>
+          </div>
+          <div class="doctor-card-footer">
+            <button class="btn btn-primary doctor-card-action" data-open-modal="true" data-doctor="Dr. Viswa Jyothi Yakkala" data-department="Neurology">
+              <span>📅 Book Appointment</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="doctor-card doctor-card-horizontal">
+          <div class="doctor-card-main">
+            <div class="doctor-photo-col">
+              <div class="doctor-photo-wrap">
+                <img src="images/doctors/dr-sajila.jpeg" alt="Dr. Sajila - Consultant Obstetrician & Gynecologist" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
+              </div>
+              <div class="doctor-opd-badge-below"><span class="opd-dot"></span> OPD Mon - Sat</div>
+            </div>
+            <div class="doctor-details-wrap">
+              <div class="doctor-meta-header"><span class="doctor-dept-badge">Mother & Child</span></div>
+              <h3 class="doctor-name">Dr. Sajila</h3>
+              <div class="doctor-qualification">MBBS, MS (OBG), DNB</div>
+              <div class="doctor-designation">Consultant Obstetrician & Gynecologist</div>
+              <div class="doctor-treatments">
+                <span class="treatment-tag">High-Risk Pregnancy</span>
+                <span class="treatment-tag">Laparoscopic Gynecology</span>
+                <span class="treatment-tag">Painless Delivery</span>
+              </div>
+            </div>
+          </div>
+          <div class="doctor-card-footer">
+            <button class="btn btn-primary doctor-card-action" data-open-modal="true" data-doctor="Dr. Sajila" data-department="Mother & Child">
+              <span>📅 Book Appointment</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="doctor-card doctor-card-horizontal">
+          <div class="doctor-card-main">
+            <div class="doctor-photo-col">
+              <div class="doctor-photo-wrap">
+                <img src="images/doctors/dr-farha.jpeg" alt="Dr. Farha - Consultant Pediatrician & Neonatologist" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
+              </div>
+              <div class="doctor-opd-badge-below"><span class="opd-dot"></span> OPD Mon - Sat</div>
+            </div>
+            <div class="doctor-details-wrap">
+              <div class="doctor-meta-header"><span class="doctor-dept-badge">Pediatrics</span></div>
+              <h3 class="doctor-name">Dr. Farha</h3>
+              <div class="doctor-qualification">MBBS, DCH, DNB Pediatrics</div>
+              <div class="doctor-designation">Consultant Pediatrician & Neonatologist</div>
+              <div class="doctor-treatments">
+                <span class="treatment-tag">Level-III NICU Care</span>
+                <span class="treatment-tag">Child Vaccination</span>
+                <span class="treatment-tag">Pediatric Emergency</span>
+              </div>
+            </div>
+          </div>
+          <div class="doctor-card-footer">
+            <button class="btn btn-primary doctor-card-action" data-open-modal="true" data-doctor="Dr. Farha" data-department="Pediatrics">
+              <span>📅 Book Appointment</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="doctor-card doctor-card-horizontal">
+          <div class="doctor-card-main">
+            <div class="doctor-photo-col">
+              <div class="doctor-photo-wrap">
+                <img src="images/doctors/dr-dinesh.jpeg" alt="Dr. Dinesh - Consultant Pulmonologist & Sleep Specialist" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
+              </div>
+              <div class="doctor-opd-badge-below"><span class="opd-dot"></span> OPD Mon - Sat</div>
+            </div>
+            <div class="doctor-details-wrap">
+              <div class="doctor-meta-header"><span class="doctor-dept-badge">Pulmonology</span></div>
+              <h3 class="doctor-name">Dr. Dinesh</h3>
+              <div class="doctor-qualification">MBBS, MD Pulmonology</div>
+              <div class="doctor-designation">Consultant Pulmonologist & Sleep Specialist</div>
+              <div class="doctor-treatments">
+                <span class="treatment-tag">Asthma & COPD</span>
+                <span class="treatment-tag">Bronchoscopy</span>
+                <span class="treatment-tag">Sleep Apnea Care</span>
+              </div>
+            </div>
+          </div>
+          <div class="doctor-card-footer">
+            <button class="btn btn-primary doctor-card-action" data-open-modal="true" data-doctor="Dr. Dinesh" data-department="Pulmonology">
+              <span>📅 Book Appointment</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="doctor-card doctor-card-horizontal">
+          <div class="doctor-card-main">
+            <div class="doctor-photo-col">
+              <div class="doctor-photo-wrap">
+                <img src="images/doctors/dr-sunil-thadigiri.jpeg" alt="Dr. Sunil Kumar Thadigiri - Chief Intensivist & Critical Care Specialist" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
+              </div>
+              <div class="doctor-opd-badge-below"><span class="opd-dot"></span> OPD Mon - Sat</div>
+            </div>
+            <div class="doctor-details-wrap">
+              <div class="doctor-meta-header"><span class="doctor-dept-badge">Critical Care</span></div>
+              <h3 class="doctor-name">Dr. Sunil Kumar Thadigiri</h3>
+              <div class="doctor-qualification">MBBS, MD Anesthesia, IDCCM</div>
+              <div class="doctor-designation">Chief Intensivist & Critical Care Specialist</div>
+              <div class="doctor-treatments">
+                <span class="treatment-tag">100-Bed ICU Critical Care</span>
+                <span class="treatment-tag">Ventilator Support</span>
+                <span class="treatment-tag">Poly-Trauma Care</span>
+              </div>
+            </div>
+          </div>
+          <div class="doctor-card-footer">
+            <button class="btn btn-primary doctor-card-action" data-open-modal="true" data-doctor="Dr. Sunil Kumar Thadigiri" data-department="Critical Care">
+              <span>📅 Book Appointment</span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- APPOINTMENT MODAL -->
-  <div class="modal-overlay" id="appointment-modal">
+  <div class="modal-overlay" id="appointment-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title-heading">
     <div class="modal-container">
       <div class="modal-header">
-        <h3>📅 Book Doctor Appointment</h3>
-        <button class="modal-close" id="modal-close-btn">✕</button>
+        <h3 id="modal-title-heading">📅 Book Doctor Appointment</h3>
+        <button class="modal-close" id="modal-close-btn" aria-label="Close appointment booking modal">✕</button>
       </div>
       <div class="modal-body">
         <form id="appointment-form">
@@ -275,7 +564,7 @@
     </div>
   </footer>
 
-  <script src="script.js?v=5"></script>
+  <script src="script.js?v=12"></script>
 </body>
 
 </html>

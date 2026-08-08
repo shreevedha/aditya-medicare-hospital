@@ -417,13 +417,18 @@ function initAppointmentModal() {
 
   if (!modal) return;
 
+  let lastFocusedElement = null;
+
   // Global trigger function
   window.openAppointmentModal = function(doctorName = '', department = '') {
+    lastFocusedElement = document.activeElement;
     modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
 
     const deptSelect = document.getElementById('modal-department-select');
     const doctorSelect = document.getElementById('modal-doctor-select');
+    const nameInput = document.getElementById('modal-patient-name');
 
     if (deptSelect && department) {
       deptSelect.value = department;
@@ -431,11 +436,19 @@ function initAppointmentModal() {
     if (doctorSelect && doctorName) {
       doctorSelect.value = doctorName;
     }
+
+    setTimeout(() => {
+      nameInput?.focus();
+    }, 100);
   };
 
   window.closeAppointmentModal = function() {
     modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+      lastFocusedElement.focus();
+    }
   };
 
   if (closeBtn) {
@@ -444,6 +457,13 @@ function initAppointmentModal() {
 
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
+      window.closeAppointmentModal();
+    }
+  });
+
+  // Keyboard Escape key to close modal
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
       window.closeAppointmentModal();
     }
   });
