@@ -593,7 +593,7 @@ function initDoctorFilters() {
 
   function filterDoctors() {
     const query = (searchInput?.value || '').toLowerCase().trim();
-    const filtered = doctorsData.filter(doc => {
+    let filtered = doctorsData.filter(doc => {
       const matchesCategory = currentCategory === 'All' || doc.department.toLowerCase() === currentCategory.toLowerCase();
       const matchesSearch = !query || 
         doc.name.toLowerCase().includes(query) ||
@@ -603,6 +603,12 @@ function initDoctorFilters() {
         doc.treatments.some(t => t.toLowerCase().includes(query));
       return matchesCategory && matchesSearch;
     });
+
+    // Limit to 6 doctors on homepage (index.html), show all on doctors.html
+    const isHomepage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/');
+    if (isHomepage && !query && currentCategory === 'All') {
+      filtered = filtered.slice(0, 6);
+    }
 
     renderDoctors(filtered);
   }
