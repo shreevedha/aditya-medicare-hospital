@@ -538,21 +538,27 @@ function initDoctorFilters() {
     }
 
     doctorGrid.innerHTML = list.map(doc => `
-      <div class="doctor-card">
-        <div class="doctor-img-wrap">
-          <img src="${doc.image}" alt="${doc.name}" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
-          <span class="doctor-dept-badge">${doc.department}</span>
-          <span class="doctor-opd-badge"><span class="opd-dot"></span> OPD Mon - Sat</span>
+      <div class="doctor-card doctor-card-square">
+        <div class="doctor-card-top">
+          <div class="doctor-avatar-wrap">
+            <img src="${doc.image}" alt="${doc.name}" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
+          </div>
+          <div class="doctor-top-meta">
+            <span class="doctor-dept-badge">${doc.department}</span>
+            <span class="doctor-opd-badge"><span class="opd-dot"></span> OPD Mon - Sat</span>
+          </div>
         </div>
-        <div class="doctor-info">
+
+        <div class="doctor-card-body">
           <h3 class="doctor-name">${doc.name}</h3>
           <div class="doctor-qualification">${doc.qualification}</div>
           <div class="doctor-designation">${doc.designation}</div>
-          
           <div class="doctor-treatments">
-            ${doc.treatments.map(t => `<span class="treatment-tag">${t}</span>`).join('')}
+            ${doc.treatments.slice(0, 3).map(t => `<span class="treatment-tag">${t}</span>`).join('')}
           </div>
+        </div>
 
+        <div class="doctor-card-footer">
           <button class="btn btn-primary doctor-card-action" data-open-modal="true" data-doctor="${doc.name}" data-department="${doc.department}">
             <span>📅 Book Appointment</span>
           </button>
