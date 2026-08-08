@@ -540,9 +540,13 @@ function initDoctorFilters() {
     doctorGrid.innerHTML = list.map(doc => `
       <div class="doctor-card doctor-card-horizontal">
         <div class="doctor-card-main">
-          <div class="doctor-photo-wrap">
-            <img src="${doc.image}" alt="${doc.name}" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
-            <span class="doctor-opd-badge"><span class="opd-dot"></span> OPD Mon - Sat</span>
+          <div class="doctor-photo-col">
+            <div class="doctor-photo-wrap">
+              <img src="${doc.image}" alt="${doc.name}" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
+            </div>
+            <div class="doctor-opd-badge-below">
+              <span class="opd-dot"></span> OPD Mon - Sat
+            </div>
           </div>
 
           <div class="doctor-details-wrap">
