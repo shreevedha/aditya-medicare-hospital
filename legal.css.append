@@ -1,0 +1,68 @@
+
+/* =====================================================
+   LOGO PALETTE DARK THEME FIX - 2026-06-10
+   Uses Aditya Medicare logo colours: navy, blue, red, orange.
+   Removes pale/white section backgrounds and green accents.
+   ===================================================== */
+:root{
+  --navy:#06182b!important;
+  --navy-2:#082846!important;
+  --blue:#0b55b7!important;
+  --blue-2:#1296d4!important;
+  --red:#d71920!important;
+  --orange:#f7941d!important;
+  --soft:#071a2d!important;
+  --text:#f4f8ff!important;
+  --muted:#c3d4e6!important;
+  --teal:#f7941d!important;
+  --gold:#f7941d!important;
+}
+html,body,main{background:#071a2d!important;color:var(--text)!important;}
+body{
+  background:
+    radial-gradient(circle at 72% 8%, rgba(18,150,212,.18), transparent 34%),
+    radial-gradient(circle at 12% 30%, rgba(215,25,32,.08), transparent 28%),
+    linear-gradient(180deg,#041321 0%,#071a2d 45%,#082846 100%) !important;
+}
+.section,.section-soft,.quick-links-bar,.contact-section,.doctors-section,.specialties-section,.facilities-section,.locations-section,.equipment-section,.reviews-section,.blog-section{
+  background:linear-gradient(180deg,#071a2d 0%,#082846 100%)!important;
+  color:var(--text)!important;
+}
+.section:nth-of-type(even),.section-soft{background:linear-gradient(180deg,#082846 0%,#071a2d 100%)!important;}
+.page-hero{background:linear-gradient(135deg,#041321 0%,#082846 100%)!important;color:var(--text)!important;}
+.section-title span,.page-hero span,.eyebrow,.kicker,.hero-gold{color:var(--orange)!important;}
+.section-title h2,.page-hero h1,.two-col h2,.contact-title,.legal-page h1,.legal-page h2{color:#ffffff!important;text-shadow:none!important;opacity:1!important;}
+.section-title p,.page-hero p,.two-col p,.lead,.legal-page p,.legal-page li{color:var(--muted)!important;opacity:1!important;}
+.aditya-name{color:#f7941d!important;border-color:rgba(247,148,29,.78)!important;box-shadow:0 0 24px rgba(247,148,29,.18), inset 0 0 18px rgba(247,148,29,.08)!important;}
+.aditya-subtitle{color:#ffffff!important;}
+.hero-divider{background:linear-gradient(90deg,transparent,#f7941d,transparent)!important;}
+.hero-btn-outline:hover{border-color:#f7941d!important;color:#f7941d!important;}
+.cinematic-stats{border-top-color:rgba(247,148,29,.32)!important;}
+.cstat-num,.cstat-num .highlight,.icu-stat-num{color:#f7941d!important;-webkit-text-fill-color:#f7941d!important;background:none!important;}
+.specialty-card,.spec-card-new,.doctor-card,.equipment-card,.equip-card,.review-card,.blog-card,.contact-card,.facility-list div,.review-summary div,.appointment-form,.appointment-modal-content,.modal-content,.quick-link-item,.location-card,.stat-card,.info-card{
+  background:rgba(9,32,52,.95)!important;
+  border:1px solid rgba(195,212,230,.18)!important;
+  box-shadow:0 18px 45px rgba(0,0,0,.25)!important;
+  color:var(--text)!important;
+}
+.equip-card{background:rgba(9,32,52,.95)!important;}
+.equip-img-wrap{background:#06182b!important;}
+.dept-pill,.equip-badge,.social-links a,.filter-btn.active{background:#0b55b7!important;color:#ffffff!important;}
+.filter-btn{background:rgba(9,32,52,.96)!important;color:#ffffff!important;border-color:rgba(195,212,230,.25)!important;}
+.nav-cta,.primary-btn,.hero-btn-primary,.submit-btn,.contact-btn-shine{background:#d71920!important;color:#fff!important;}
+.nav-cta:hover,.primary-btn:hover,.hero-btn-primary:hover,.submit-btn:hover{background:#b9141a!important;}
+footer{background:#041321!important;color:#dce9f6!important;}
+.footer-col h4{color:#f7941d!important;}
+.footer-col a,.footer-bottom a{color:#cfe6ff!important;}
+.footer-bottom{color:#aac4ff!important;}
+.legal-links{margin-top:8px;font-size:13px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.legal-links a{color:#cfe6ff;text-decoration:none;}
+.legal-links a:hover{color:#f7941d;}
+.legal-page{padding:150px 0 80px;background:linear-gradient(180deg,#071a2d,#082846);min-height:70vh;}
+.legal-card{max-width:920px;margin:0 auto;background:rgba(9,32,52,.95);border:1px solid rgba(195,212,230,.18);border-radius:24px;padding:34px;box-shadow:0 18px 45px rgba(0,0,0,.25);}
+.legal-card h1{font-size:clamp(2rem,4vw,3.4rem);margin:0 0 12px;}
+.legal-card h2{margin-top:28px;color:#f7941d!important;font-size:1.2rem;}
+.legal-card p,.legal-card li{line-height:1.75;}
+.legal-card ul{padding-left:22px;}
+.legal-note{border-left:4px solid #d71920;padding:12px 16px;background:rgba(215,25,32,.08);border-radius:12px;margin:20px 0;}
+@media(max-width:700px){.legal-card{padding:24px 18px}.legal-page{padding-top:120px}}
