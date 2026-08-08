@@ -529,9 +529,10 @@ function initDoctorFilters() {
 
   function renderDoctors(list) {
     if (list.length === 0) {
-      doctorGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">
-        <h3 style="margin-bottom: 8px;">No matching doctors found</h3>
-        <p>Try searching for a different specialty, qualification, or doctor name.</p>
+      doctorGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 50px 20px; background: #ffffff; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+        <div style="font-size: 2.5rem; margin-bottom: 12px;">🩺</div>
+        <h3 style="margin-bottom: 8px; color: var(--navy); font-size: 1.3rem;">No matching doctors found</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Try searching for another specialty, doctor name, or qualification.</p>
       </div>`;
       return;
     }
@@ -541,16 +542,19 @@ function initDoctorFilters() {
         <div class="doctor-img-wrap">
           <img src="${doc.image}" alt="${doc.name}" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
           <span class="doctor-dept-badge">${doc.department}</span>
+          <span class="doctor-opd-badge"><span class="opd-dot"></span> OPD Mon - Sat</span>
         </div>
         <div class="doctor-info">
           <h3 class="doctor-name">${doc.name}</h3>
           <div class="doctor-qualification">${doc.qualification}</div>
           <div class="doctor-designation">${doc.designation}</div>
+          
           <div class="doctor-treatments">
             ${doc.treatments.map(t => `<span class="treatment-tag">${t}</span>`).join('')}
           </div>
+
           <button class="btn btn-primary doctor-card-action" data-open-modal="true" data-doctor="${doc.name}" data-department="${doc.department}">
-            Book Appointment
+            <span>📅 Book Appointment</span>
           </button>
         </div>
       </div>

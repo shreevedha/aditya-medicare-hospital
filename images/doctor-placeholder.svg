@@ -1,1 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect width="400" height="400" fill="#e8f1fb"/><circle cx="200" cy="145" r="70" fill="#8aa4c8"/><path d="M70 360c25-85 80-130 130-130s105 45 130 130" fill="#8aa4c8"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 350" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f4fa"/>
+      <stop offset="100%" stop-color="#dbe4f0"/>
+    </linearGradient>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1455b3"/>
+      <stop offset="100%" stop-color="#092d74"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="300" height="350" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Cross Icon -->
+  <path d="M150 40 V70 M135 55 H165" stroke="#38b6ff" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+  
+  <!-- Doctor Silouette Avatar -->
+  <g opacity="0.85">
+    <!-- Head -->
+    <circle cx="150" cy="130" r="48" fill="url(#avatarGrad)"/>
+    <!-- Body / Coat -->
+    <path d="M80 290 Q80 200 150 200 Q220 200 220 290 Z" fill="url(#avatarGrad)"/>
+    <!-- Stethoscope Curve -->
+    <path d="M125 210 Q150 260 175 210" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="175" cy="210" r="5" fill="#ffffff" opacity="0.9"/>
+    <circle cx="125" cy="210" r="5" fill="#ffffff" opacity="0.9"/>
+  </g>
+</svg>
