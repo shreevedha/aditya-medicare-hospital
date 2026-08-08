@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ADITYA MEDICARE HOSPITALS - INTERACTIVE LOGIC & SCRIPT SYSTEM
+   ADITYA MEDICARE HOSPITALS - INTERACTIVE LOGIC & FULL DOCTORS SYSTEM
    ========================================================================== */
 
 // SPECIALTIES DATASET
@@ -15,47 +15,49 @@ const specialtiesData = [
   { name: "Nephrology", icon: "🩺", description: "Dialysis, kidney care & nephrology consultation." },
   { name: "Critical Care", icon: "🏥", description: "24/7 100-bed ICU, trauma & emergency critical care." },
   { name: "General Medicine", icon: "🩺", description: "Internal medicine, infectious disease & adult care." },
+  { name: "General Surgery", icon: "🔪", description: "Laparoscopic, laser & general surgical procedures." },
   { name: "ENT", icon: "👂", description: "Ear, nose, throat, micro-ear & head/neck surgery." },
+  { name: "Dermatology", icon: "✨", description: "Skin, hair, laser treatment & clinical dermatology." },
   { name: "Radiology", icon: "📷", description: "3T MRI, 128-Slice CT Scan, Ultrasound & Digital X-Ray." }
 ];
 
-// DOCTORS DATABASE
+// COMPREHENSIVE DOCTORS DATABASE (36 REAL CONSULTANTS & SURGEONS)
 const doctorsData = [
   {
     name: "Dr. Krishna Sravanth Pakanati",
     department: "Orthopedics",
     qualification: "MBBS, DNB Orthopedics, MCh Ortho, FJR, FSS",
-    designation: "Consultant Senior Orthopedic Surgeon",
+    designation: "Chief Consultant Orthopedic & Joint Replacement Surgeon",
     image: "images/doctors/krishna-sravanth.jpg",
-    summary: "Orthopedic surgeon specializing in joint replacement, trauma and arthroscopy.",
-    treatments: ["Joint Replacement", "Arthroscopy", "Spine & Trauma Care", "Fracture Surgery"]
+    summary: "Senior orthopedic surgeon specializing in MISSO Robotic joint replacement, arthroscopy, and complex trauma care.",
+    treatments: ["MISSO Robotic Knee", "Joint Replacement", "Arthroscopy", "Spine & Trauma Care"]
   },
   {
     name: "Dr. Ramakoteswara Rao K",
     department: "Orthopedics",
     qualification: "D Ortho, Fellowship in Arthroplasty and Arthroscopy",
-    designation: "Consultant Orthopaedic Surgeon",
+    designation: "Senior Consultant Orthopaedic Surgeon",
     image: "images/doctors/ramakoteswara-rao.jpg",
-    summary: "Expert in knee/hip replacement and arthroscopic surgeries.",
-    treatments: ["Knee & Hip Replacement", "Arthroscopy", "Joint Pain Care", "Trauma"]
+    summary: "Expert in primary & revision hip and knee replacements and sports injury arthroscopic management.",
+    treatments: ["Knee & Hip Replacement", "Arthroscopy", "Joint Pain Care", "Fracture Surgery"]
   },
   {
     name: "Dr. Sai Krishna Katakam",
     department: "Gastroenterology",
-    qualification: "MBBS, MS, MCh (SGPGIMS)",
+    qualification: "MBBS, MS, MCh (SGPGIMS Lucknow)",
     designation: "Consultant Surgical Gastroenterologist & GI Onco-surgeon",
     image: "images/doctors/sai-krishna-katakam.jpeg",
-    summary: "Specialist in GI, HPB and surgical gastroenterology.",
-    treatments: ["GI Surgery", "HPB Surgery care", "Laparoscopic Gastro", "Onco-surgery"]
+    summary: "Specialist in laparoscopic GI surgery, HPB liver procedures, and GI surgical oncology.",
+    treatments: ["Laparoscopic GI Surgery", "HPB & Liver Care", "GI Onco-surgery", "Endoscopy"]
   },
   {
     name: "Dr. Raghu Sarath Punukollu",
     department: "Urology",
     qualification: "MBBS, DNB, MCh Urology",
-    designation: "Consultant Urologist and Andrologist",
+    designation: "Consultant Urologist, Reconstructive Surgeon & Andrologist",
     image: "images/doctors/raghu-sarath.jpg",
-    summary: "Specialist in kidney stone treatment, endourology and male fertility.",
-    treatments: ["Kidney Stone Care", "Urinary Surgery", "Andrology", "Endourology"]
+    summary: "Expert in laser kidney stone removal (RIRS), prostate surgery, endourology, and male fertility.",
+    treatments: ["Laser Stone Removal (RIRS)", "Prostate Surgery", "Andrology", "Endourology"]
   },
   {
     name: "Dr. Guttikonda Bhanu Vijay",
@@ -63,17 +65,17 @@ const doctorsData = [
     qualification: "MBBS, MD General Medicine, DM Cardiology",
     designation: "Consultant Interventional Cardiologist",
     image: "images/doctors/dr-guttikonda.jpeg",
-    summary: "Senior cardiologist for angioplasty, heart attack management & pacemaker implantation.",
-    treatments: ["Angioplasty & Stenting", "Cath Lab Procedures", "Heart Failure Care", "ECG & Echo"]
+    summary: "Senior cardiologist specializing in 24/7 emergency primary angioplasty, Cath Lab procedures, and heart failure.",
+    treatments: ["Angioplasty & Stenting", "Cath Lab Interventions", "Heart Failure Care", "Pacemaker"]
   },
   {
     name: "Dr. Viswa Jyothi Yakkala",
     department: "Neurology",
     qualification: "MBBS, MD, DM Neurology",
-    designation: "Consultant Neurologist",
+    designation: "Consultant Neurologist & Stroke Specialist",
     image: "images/doctors/dr-viswa-jyothi.jpeg",
-    summary: "Specialist in stroke care, epilepsy, headache management & movement disorders.",
-    treatments: ["Stroke Care", "Epilepsy", "Headache & Migraine", "Neuro Care"]
+    summary: "Specialist in acute stroke thrombolysis, epilepsy, headache management, and neuro intensive care.",
+    treatments: ["Acute Stroke Care", "Epilepsy Management", "Migraine & Headache", "Neuro ICU Care"]
   },
   {
     name: "Dr. Sajila",
@@ -81,8 +83,8 @@ const doctorsData = [
     qualification: "MBBS, MS (OBG), DNB",
     designation: "Consultant Obstetrician & Gynecologist",
     image: "images/doctors/dr-sajila.jpeg",
-    summary: "Specialist in high-risk pregnancy, laparoscopic gynecology & women's health.",
-    treatments: ["High-Risk Pregnancy", "Normal & C-Section Delivery", "Laparoscopic Gynecology", "Infertility Care"]
+    summary: "Specialist in high-risk pregnancy, laparoscopic gynecology surgery, painless delivery, and women's health.",
+    treatments: ["High-Risk Pregnancy", "Laparoscopic Gynecology", "Painless Delivery", "Infertility Care"]
   },
   {
     name: "Dr. Farha",
@@ -90,8 +92,8 @@ const doctorsData = [
     qualification: "MBBS, DCH, DNB Pediatrics",
     designation: "Consultant Pediatrician & Neonatologist",
     image: "images/doctors/dr-farha.jpeg",
-    summary: "Expert in newborn care, vaccination, pediatric emergencies & child nutrition.",
-    treatments: ["Neonatal ICU (NICU)", "Child Vaccination", "Pediatric Growth Care", "Child Emergency"]
+    summary: "Expert in newborn NICU care, child vaccination, pediatric emergency management, and growth care.",
+    treatments: ["Level-III NICU Care", "Child Vaccination", "Pediatric Emergency", "Growth & Nutrition"]
   },
   {
     name: "Dr. Dinesh",
@@ -99,8 +101,8 @@ const doctorsData = [
     qualification: "MBBS, MD Pulmonology",
     designation: "Consultant Pulmonologist & Sleep Specialist",
     image: "images/doctors/dr-dinesh.jpeg",
-    summary: "Expert in asthma, COPD, sleep apnea & advanced bronchoscopy.",
-    treatments: ["Asthma & COPD", "Bronchoscopy", "Sleep Apnea Care", "Lung Infections"]
+    summary: "Expert in asthma, COPD, sleep apnea diagnosis, video bronchoscopy, and respiratory ICU care.",
+    treatments: ["Asthma & COPD", "Video Bronchoscopy", "Sleep Apnea Care", "Respiratory ICU"]
   },
   {
     name: "Dr. Sunil Kumar Thadigiri",
@@ -108,8 +110,242 @@ const doctorsData = [
     qualification: "MBBS, MD Anesthesia, IDCCM",
     designation: "Chief Intensivist & Critical Care Specialist",
     image: "images/doctors/dr-sunil-thadigiri.jpeg",
-    summary: "Head of 100-bed ICU managing poly-trauma, sepsis & critical care patients.",
-    treatments: ["ICU Critical Care", "Ventilator Support", "Poly-Trauma Care", "Sepsis Management"]
+    summary: "Head of 100-bed ICU managing multi-organ failure, poly-trauma, sepsis, and mechanical ventilation.",
+    treatments: ["100-Bed ICU Care", "Ventilator Support", "Poly-Trauma Management", "Sepsis Care"]
+  },
+  {
+    name: "Dr. Sravani Jakkireddy",
+    department: "Mother & Child",
+    qualification: "MBBS, MS (OBG), DNB",
+    designation: "Consultant Gynecologic Surgeon & Fertility Specialist",
+    image: "images/doctors/dr-sravani-jakkireddy.jpeg",
+    summary: "Expert in minimally invasive gynecologic procedures, fertility workup, and maternity wellness.",
+    treatments: ["Fertility Care", "Laparoscopic Surgery", "High-Risk Delivery", "Prenatal Care"]
+  },
+  {
+    name: "Dr. Meena",
+    department: "General Medicine",
+    qualification: "MBBS, MD General Medicine",
+    designation: "Consultant Physician & Diabetologist",
+    image: "images/doctors/dr-meena.jpeg",
+    summary: "Specialist in diabetes mellitus management, hypertension, infectious diseases, and adult health.",
+    treatments: ["Diabetes Care", "Hypertension", "Infectious Diseases", "Preventive Checkups"]
+  },
+  {
+    name: "Dr. Abhiram Katragadda",
+    department: "Orthopedics",
+    qualification: "MBBS, MS Ortho, FIJR",
+    designation: "Consultant Joint Replacement & Trauma Surgeon",
+    image: "images/doctors/abhiram-katragadda.png",
+    summary: "Specialist in complex fracture reconstruction, sports medicine, and joint replacement.",
+    treatments: ["Fracture Reconstruction", "Joint Replacement", "Sports Injuries", "Arthroscopy"]
+  },
+  {
+    name: "Dr. Akif Baig",
+    department: "Cardiology",
+    qualification: "MBBS, MD, DM Cardiology",
+    designation: "Consultant Cardiologist",
+    image: "images/doctors/akif-baig.jpg",
+    summary: "Consultant for adult cardiology, echocardiography, coronary angiogram, and hypertension care.",
+    treatments: ["Echocardiography", "Coronary Angiogram", "Hypertension", "Preventive Heart Care"]
+  },
+  {
+    name: "Dr. BCHV Akhilesh",
+    department: "General Surgery",
+    qualification: "MBBS, MS General Surgery, FMAS",
+    designation: "Consultant Laparoscopic & General Surgeon",
+    image: "images/doctors/bchv-akhilesh.png",
+    summary: "Specialist in laparoscopic hernia repair, appendectomy, gallbladder surgery, and laser proctology.",
+    treatments: ["Laparoscopic Hernia", "Appendectomy", "Gallbladder Surgery", "Laser Proctology"]
+  },
+  {
+    name: "Dr. Bhumana Sai Srinivas",
+    department: "Neurology",
+    qualification: "MBBS, MD, DM Neurology",
+    designation: "Consultant Neurologist",
+    image: "images/doctors/bhumana-sai-srinivas.jpg",
+    summary: "Specialist in peripheral neuropathy, neuromuscular disorders, stroke, and Parkinson's disease.",
+    treatments: ["Neuropathy Care", "Parkinson's Care", "Stroke Recovery", "EEG & EMG"]
+  },
+  {
+    name: "Dr. Ch. Amulya",
+    department: "Pediatrics",
+    qualification: "MBBS, MD Pediatrics",
+    designation: "Consultant Pediatric Physician",
+    image: "images/doctors/ch-amulya.jpg",
+    summary: "Dedicated pediatrician focusing on pediatric infectious diseases, nutrition, and child growth.",
+    treatments: ["Child Health Care", "Immunization", "Pediatric Infections", "Growth Monitoring"]
+  },
+  {
+    name: "Dr. Bindesh",
+    department: "Urology",
+    qualification: "MBBS, MS, MCh Urology",
+    designation: "Consultant Urologist & Kidney Transplant Surgeon",
+    image: "images/doctors/dr-bindesh.png",
+    summary: "Expert in endourological procedures, laparoscopic urology, and kidney stone management.",
+    treatments: ["Endourology", "Kidney Stone Laser", "Laparoscopic Urology", "Prostate Care"]
+  },
+  {
+    name: "Dr. Gamidi Anusha",
+    department: "Mother & Child",
+    qualification: "MBBS, DNB (OBG)",
+    designation: "Consultant Obstetrician",
+    image: "images/doctors/gamidi-anusha.jpg",
+    summary: "Consultant obstetrician managing routine and complicated maternity deliveries and adolescent health.",
+    treatments: ["Maternity Care", "Normal Delivery", "Postnatal Care", "Women's Wellness"]
+  },
+  {
+    name: "Dr. Goli Kasiram",
+    department: "Nephrology",
+    qualification: "MBBS, MD, DM Nephrology",
+    designation: "Consultant Nephrologist & Transplant Physician",
+    image: "images/doctors/goli-kasiram.jpg",
+    summary: "Specialist in acute renal failure, chronic kidney disease (CKD), hemodialysis, and kidney care.",
+    treatments: ["Hemodialysis", "Chronic Kidney Disease", "Hypertensive Renal Care", "Kidney Health"]
+  },
+  {
+    name: "Dr. Gopala Krishna Medarametla",
+    department: "General Medicine",
+    qualification: "MBBS, MD General Medicine",
+    designation: "Senior Consultant Physician",
+    image: "images/doctors/gopala-krishna-medarametla.jpg",
+    summary: "Comprehensive internal medicine specialist for metabolic disorders, fever evaluation, and adult care.",
+    treatments: ["Internal Medicine", "Fever & Infection", "Metabolic Care", "Geriatric Care"]
+  },
+  {
+    name: "Dr. J. Ramesh",
+    department: "Cardiology",
+    qualification: "MBBS, MD, DM Cardiology",
+    designation: "Consultant Clinical Cardiologist",
+    image: "images/doctors/j-ramesh.jpg",
+    summary: "Expert in non-invasive cardiac evaluation, treadmill stress testing (TMT), and arrhythmia management.",
+    treatments: ["ECG & TMT", "Echocardiogram", "Arrhythmia Care", "Heart Health Checkup"]
+  },
+  {
+    name: "Dr. Jinaga Nageswar Rao",
+    department: "Pulmonology",
+    qualification: "MBBS, DTCD, DNB Chest",
+    designation: "Senior Consultant Chest Physician",
+    image: "images/doctors/jinaga-nageswar-rao.jpg",
+    summary: "Specialist in tuberculosis, lung fibrosis, chest infections, and occupational lung disorders.",
+    treatments: ["Tuberculosis Care", "Lung Infections", "Chest Clinic", "Pulmonary Rehab"]
+  },
+  {
+    name: "Dr. K. Suri Babu",
+    department: "Orthopedics",
+    qualification: "MBBS, MS Ortho",
+    designation: "Senior Consultant Orthopedic Surgeon",
+    image: "images/doctors/k-suri-babu.png",
+    summary: "Experienced orthopedic surgeon specializing in complex joint trauma and bone deformity correction.",
+    treatments: ["Trauma Surgery", "Deformity Correction", "Bone Fractures", "Joint Pain"]
+  },
+  {
+    name: "Dr. Kesari Sravani",
+    department: "Dermatology",
+    qualification: "MBBS, DDVL",
+    designation: "Consultant Dermatologist & Cosmetologist",
+    image: "images/doctors/kesari-sravani.jpg",
+    summary: "Expert in clinical dermatology, acne, psoriasis, eczema, and laser cosmetic treatments.",
+    treatments: ["Acne & Psoriasis", "Laser Skin Care", "Hair Loss Treatment", "Dermatologic Surgery"]
+  },
+  {
+    name: "Dr. Nimmagadda Bhanu Teja",
+    department: "Critical Care",
+    qualification: "MBBS, DA, IDCCM",
+    designation: "Consultant Intensivist",
+    image: "images/doctors/nimmagadda-bhanu-teja.jpg",
+    summary: "Round-the-clock critical care consultant for trauma, respiratory failure, and post-operative monitoring.",
+    treatments: ["ICU Monitoring", "Post-Op ICU Care", "Respiratory Failure", "Emergency Care"]
+  },
+  {
+    name: "Dr. Pavan Badugu",
+    department: "Gastroenterology",
+    qualification: "MBBS, MD, DM Gastroenterology",
+    designation: "Consultant Medical Gastroenterologist",
+    image: "images/doctors/pavan-badugu.jpg",
+    summary: "Specialist in diagnostic & therapeutic upper GI endoscopy, colonoscopy, GERD, and liver disorders.",
+    treatments: ["Diagnostic Endoscopy", "Colonoscopy", "GERD & Acidity", "Liver Disease"]
+  },
+  {
+    name: "Dr. Racha Madhavi",
+    department: "Mother & Child",
+    qualification: "MBBS, DGO",
+    designation: "Consultant Gynecologist",
+    image: "images/doctors/racha-madhavi.jpg",
+    summary: "Consultant gynecologist for preventive cervical screening, fibroid management, and menopause care.",
+    treatments: ["Gynec Care", "Pap Smear & Screening", "Fibroid Care", "Menopause Care"]
+  },
+  {
+    name: "Dr. Sampara Sirish",
+    department: "ENT",
+    qualification: "MBBS, MS ENT",
+    designation: "Consultant ENT, Head & Neck Surgeon",
+    image: "images/doctors/sampara-sirish.jpg",
+    summary: "Specialist in micro-ear surgery, endoscopic sinus surgery (FESS), tonsillectomy, and voice care.",
+    treatments: ["Micro-Ear Surgery", "Endoscopic Sinus Surgery", "Tonsil & Adenoids", "Voice Disorders"]
+  },
+  {
+    name: "Dr. Seshank Nuthi",
+    department: "Radiology",
+    qualification: "MBBS, MD Radiology",
+    designation: "Chief Consultant Radiologist",
+    image: "images/doctors/seshank-nuthi.jpg",
+    summary: "Head of diagnostic radiology overseeing 3T MRI, 128-Slice CT scan, color Doppler, and ultrasound.",
+    treatments: ["3T MRI Diagnostics", "128-Slice CT Scan", "Ultrasound & Doppler", "X-Ray Interpretation"]
+  },
+  {
+    name: "Dr. Tejaswi Gogineni",
+    department: "Pathology",
+    qualification: "MBBS, MD Pathology",
+    designation: "Consultant Pathologist & Lab Director",
+    image: "images/doctors/tejaswi-gogineni.jpg",
+    summary: "Director of central clinical pathology, histopathology, hematology, and biochemistry diagnostic lab.",
+    treatments: ["Clinical Pathology", "Histopathology", "Hematology", "Diagnostic Lab"]
+  },
+  {
+    name: "Dr. Unnam Yamuna",
+    department: "General Surgery",
+    qualification: "MBBS, MS General Surgery",
+    designation: "Consultant General Surgeon",
+    image: "images/doctors/unnam-yamuna.png",
+    summary: "Consultant surgeon specializing in breast surgery, thyroid surgery, wound care, and diabetic foot management.",
+    treatments: ["Breast & Thyroid Surgery", "Wound Care", "Diabetic Foot Care", "Minor Operations"]
+  },
+  {
+    name: "Dr. V. Bhaskara Rao",
+    department: "Orthopedics",
+    qualification: "MBBS, D Ortho",
+    designation: "Consultant Orthopedic Surgeon",
+    image: "images/doctors/v-bhaskara-rao.jpg",
+    summary: "Consultant for degenerative joint diseases, arthritis management, and emergency trauma fixation.",
+    treatments: ["Arthritis Management", "Trauma Fixation", "Spine Pain Care", "Orthopedic OPD"]
+  },
+  {
+    name: "Dr. V. Sai Krupa",
+    department: "General Medicine",
+    qualification: "MBBS, MD General Medicine",
+    designation: "Consultant General Physician",
+    image: "images/doctors/v-sai-krupa.jpg",
+    summary: "General internal medicine consultant for routine ailments, preventive health screening, and chronic disease management.",
+    treatments: ["General OPD", "Preventive Screening", "Chronic Disease Care", "Adult Health"]
+  },
+  {
+    name: "Dr. Vaddi Viswanath",
+    department: "Urology",
+    qualification: "MBBS, MS, MCh Urology",
+    designation: "Consultant Urologist",
+    image: "images/doctors/vaddi-viswanath.jpg",
+    summary: "Specialist in urinary tract infections, male urinary problems, bladder issues, and kidney stone management.",
+    treatments: ["Urinary Tract Care", "Bladder Surgery", "Kidney Stones", "Prostate Health"]
+  },
+  {
+    name: "Dr. Y.S. Himaja",
+    department: "Mother & Child",
+    qualification: "MBBS, MS (OBG)",
+    designation: "Consultant Gynecologist & Fetal Medicine Specialist",
+    image: "images/doctors/ys-himaja.jpg",
+    summary: "Specialist in fetal ultrasound scans, high-risk maternity care, and genetic counseling.",
+    treatments: ["Fetal Medicine", "Ultrasound Scans", "High-Risk Obstetrics", "Maternal Wellness"]
   }
 ];
 
@@ -237,9 +473,7 @@ function initAppointmentModal() {
 
       showToast(`Thank you, ${name}! Your appointment request has been received. Our team will contact you shortly.`);
       form.reset();
-      setTimeout(() => {
-        window.closeAppointmentModal();
-      }, 1200);
+      window.closeAppointmentModal();
     });
   }
 }
@@ -274,7 +508,7 @@ function initDoctorFilters() {
 
   // Render filter pills
   if (filterPillsContainer) {
-    const categories = ['All', 'Orthopedics', 'Cardiology', 'Gastroenterology', 'Neurology', 'Urology', 'Pulmonology', 'Pediatrics', 'Mother & Child', 'Critical Care'];
+    const categories = ['All', 'Orthopedics', 'Cardiology', 'Gastroenterology', 'Neurology', 'Urology', 'Pulmonology', 'Pediatrics', 'Mother & Child', 'Critical Care', 'General Medicine', 'General Surgery', 'Nephrology', 'Dermatology', 'ENT', 'Radiology', 'Pathology'];
     filterPillsContainer.innerHTML = categories.map(cat => 
       `<button class="filter-pill ${cat === 'All' ? 'active' : ''}" data-category="${cat}">${cat}</button>`
     ).join('');
@@ -296,8 +530,8 @@ function initDoctorFilters() {
   function renderDoctors(list) {
     if (list.length === 0) {
       doctorGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">
-        <h3>No matching doctors found</h3>
-        <p>Try searching for a different specialty or doctor name.</p>
+        <h3 style="margin-bottom: 8px;">No matching doctors found</h3>
+        <p>Try searching for a different specialty, qualification, or doctor name.</p>
       </div>`;
       return;
     }
@@ -305,7 +539,7 @@ function initDoctorFilters() {
     doctorGrid.innerHTML = list.map(doc => `
       <div class="doctor-card">
         <div class="doctor-img-wrap">
-          <img src="${doc.image}" alt="${doc.name}" onerror="this.src='images/doctor-placeholder.svg';" />
+          <img src="${doc.image}" alt="${doc.name}" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
           <span class="doctor-dept-badge">${doc.department}</span>
         </div>
         <div class="doctor-info">
