@@ -1130,7 +1130,7 @@ button, input, select, textarea {
 }
 
 /* --------------------------------------------------------------------------
-   LOCATION & CONTACT SECTION
+   LOCATION & CONTACT SECTION (RESPONSIVE CARD & ACTIONS FIX)
    -------------------------------------------------------------------------- */
 .contact-layout {
   display: grid;
@@ -1144,6 +1144,8 @@ button, input, select, textarea {
   border-radius: var(--radius-md);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 .contact-detail-item {
@@ -1166,6 +1168,10 @@ button, input, select, textarea {
   flex-shrink: 0;
 }
 
+.contact-detail-text {
+  min-width: 0; /* Enables flex child text truncation/wrapping */
+}
+
 .contact-detail-text h4 {
   font-size: 1.05rem;
   color: var(--navy);
@@ -1175,6 +1181,22 @@ button, input, select, textarea {
 .contact-detail-text p {
   font-size: 0.92rem;
   color: var(--text-muted);
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.contact-actions {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.contact-actions .btn {
+  flex: 1 1 200px;
+  justify-content: center;
+  text-align: center;
 }
 
 .map-container {
@@ -1184,11 +1206,13 @@ button, input, select, textarea {
   border: 1px solid var(--border-color);
   height: 100%;
   min-height: 380px;
+  width: 100%;
 }
 
 .map-container iframe {
   width: 100%;
   height: 100%;
+  min-height: 380px;
   border: none;
 }
 
@@ -1550,6 +1574,23 @@ button, input, select, textarea {
     gap: 20px;
   }
 
+  .contact-info-card {
+    padding: 24px 20px;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact-actions .btn {
+    width: 100%;
+  }
+
+  .map-container {
+    min-height: 300px;
+  }
+
   .form-row {
     grid-template-columns: 1fr;
   }
@@ -1565,6 +1606,24 @@ button, input, select, textarea {
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .contact-info-card {
+    padding: 20px 16px;
+  }
+
+  .contact-detail-item {
+    gap: 12px;
+  }
+
+  .contact-detail-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
   .doctors-grid {
     grid-template-columns: 1fr;
   }
