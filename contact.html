@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us & Emergency Enquiry | Aditya Medicare Hospitals Guntur</title>
   <meta name="description"
-    content="Contact Aditya Medicare Hospitals Guntur. Call 0863-294-4444 for 24/7 emergency care, appointment enquiries and general medical assistance." />
+    content="Get in touch with Aditya Medicare Hospitals Guntur. Call 24/7 Emergency Hotline 0863-294-4444 or book an appointment online." />
   <meta name="keywords"
-    content="contact Aditya Medicare, hospital phone number Guntur, emergency hospital number Guntur, book appointment Guntur hospital" />
+    content="contact Aditya Medicare, emergency phone Guntur hospital, book appointment Guntur, hospital address Guntur" />
   <meta name="author" content="Aditya Medicare Hospitals, Guntur" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.adityamedicarehospitals.com/contact.html" />
@@ -26,22 +26,6 @@
 </head>
 
 <body>
-
-  <!-- TOPBAR -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="topbar-info">
-        <div class="topbar-item">📍 <span>Kovelamudivari St, Suryaraopeta, Guntur, AP 522002</span></div>
-        <div class="topbar-item">⏰ <span>OPD Hours: Mon - Sat: 9:00 AM - 8:00 PM | Emergency: 24/7</span></div>
-      </div>
-      <div class="topbar-info">
-        <a href="tel:0863294444" class="emergency-pill">
-          <span class="pulse-dot"></span>
-          Emergency: 0863-294-4444
-        </a>
-      </div>
-    </div>
-  </div>
 
   <!-- NAVBAR -->
   <nav class="navbar">
@@ -65,7 +49,10 @@
       </ul>
 
       <div class="nav-cta">
-        <a href="tel:0863294444" class="btn btn-danger">📞 Call Emergency</a>
+        <a href="tel:0863294444" class="btn btn-danger">
+          <svg class="btn-icon" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.03 21 3 13.97 3 5.48a1 1 0 011-1H7.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.27 1.11l-2.37 2.32z"/></svg>
+          Call Emergency
+        </a>
         <button class="btn btn-primary" data-open-modal="true">Book Appointment</button>
       </div>
 
@@ -94,7 +81,10 @@
       <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
     <div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px; padding-top: 20px;">
-      <a href="tel:0863294444" class="btn btn-danger" style="width:100%;">📞 Call 0863-294-4444</a>
+      <a href="tel:0863294444" class="btn btn-danger" style="width:100%;">
+        <svg class="btn-icon" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.03 21 3 13.97 3 5.48a1 1 0 011-1H7.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.27 1.11l-2.37 2.32z"/></svg>
+        Call 0863-294-4444
+      </a>
       <button class="btn btn-primary" style="width:100%;" data-open-modal="true">Book Appointment</button>
     </div>
   </div>
@@ -103,9 +93,9 @@
   <section class="section section-soft" style="padding: 50px 0 30px 0;">
     <div class="container">
       <div class="section-header" style="margin-bottom: 20px;">
-        <span class="section-tag">Get in Touch</span>
+        <span class="section-tag">Get In Touch</span>
         <h1 class="section-title">Contact Aditya Medicare Hospitals</h1>
-        <p class="section-subtitle">We are here to assist you with appointments, emergency trauma & general enquiries.</p>
+        <p class="section-subtitle">Reach out to our patient desk for appointments, emergency assistance or medical enquiries.</p>
       </div>
     </div>
   </section>
@@ -114,13 +104,12 @@
   <section class="section section-white">
     <div class="container">
       <div class="contact-layout">
-        <!-- Inquiry Form -->
         <div class="contact-info-card">
-          <h2 style="font-size: 1.5rem; color: var(--navy); margin-bottom: 20px;">Send Us a Message</h2>
-          <form id="contact-page-form" onsubmit="event.preventDefault(); alert('Thank you for reaching out! Our team will respond to your message shortly.'); this.reset();">
+          <h3 style="font-size: 1.4rem; color: var(--navy); margin-bottom: 20px;">Send Us a Direct Message</h3>
+          <form id="contact-page-form">
             <div class="form-group">
-              <label for="contact-name">Your Full Name *</label>
-              <input type="text" id="contact-name" class="form-control" placeholder="Enter your full name" required />
+              <label for="contact-name">Full Name *</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="e.g. Ramesh Kumar" required />
             </div>
 
             <div class="form-row">
@@ -135,38 +124,60 @@
             </div>
 
             <div class="form-group">
-              <label for="contact-subject">Subject / Department</label>
-              <input type="text" id="contact-subject" class="form-control" placeholder="e.g. Cardiology OPD enquiry" />
+              <label for="contact-subject">Inquiry Subject</label>
+              <select id="contact-subject" class="form-control">
+                <option value="General Enquiry">General Enquiry</option>
+                <option value="Doctor Appointment">Doctor Appointment</option>
+                <option value="Health Checkup Package">Health Checkup Package</option>
+                <option value="Feedback / Suggestion">Feedback / Suggestion</option>
+              </select>
             </div>
 
             <div class="form-group">
-              <label for="contact-message">Your Message / Query *</label>
-              <textarea id="contact-message" class="form-control" rows="4" placeholder="How can we help you?" required></textarea>
+              <label for="contact-message">Your Message *</label>
+              <textarea id="contact-message" class="form-control" rows="4" placeholder="How can we assist you?" required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">Send Message</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1rem;">
+              Send Message
+            </button>
           </form>
         </div>
 
-        <!-- Contact Cards & Map -->
-        <div style="display: flex; flex-direction: column; gap: 24px;">
-          <div class="contact-info-card">
-            <h3 style="font-size: 1.25rem; color: var(--navy); margin-bottom: 16px;">Direct Hotline Contacts</h3>
-            <p style="margin-bottom: 10px;">
-              🚨 <strong>24/7 Emergency Helpline:</strong> <a href="tel:0863294444" style="color: var(--red); font-weight: 800;">0863-294-4444</a>
-            </p>
-            <p style="margin-bottom: 10px;">
-              📞 <strong>Appointment Desk:</strong> <a href="tel:08632944445" style="color: var(--navy); font-weight: 700;">0863-294-4445</a>
-            </p>
-            <p style="margin-bottom: 10px;">
-              ✉️ <strong>Email Enquiry:</strong> <a href="mailto:info@adityamedicarehospitals.com">info@adityamedicarehospitals.com</a>
-            </p>
-            <p>
-              📍 <strong>Hospital Address:</strong> 3rd Line, Gunturvari Thota, Kothapeta, Kovelamudivari St, Suryaraopeta, Guntur, AP 522002
-            </p>
+        <div>
+          <div class="contact-info-card" style="margin-bottom: 24px;">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">📍</div>
+              <div class="contact-detail-text">
+                <h4>Hospital Location</h4>
+                <p>3rd Line, Gunturvari Thota, Kothapeta, Kovelamudivari St, Suryaraopeta, Guntur, AP 522002</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">📞</div>
+              <div class="contact-detail-text">
+                <h4>24/7 Emergency & Enquiries</h4>
+                <p><a href="tel:0863294444" style="font-weight: 700; color: var(--red);">0863-294-4444</a> | <a href="tel:08632944445">0863-294-4445</a></p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">✉️</div>
+              <div class="contact-detail-text">
+                <h4>Email Support</h4>
+                <p><a href="mailto:info@adityamedicarehospitals.com">info@adityamedicarehospitals.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-actions">
+              <a href="https://maps.google.com/?q=Aditya+Medicare+Hospitals+Guntur" target="_blank" rel="noopener" class="btn btn-secondary">
+                🗺️ Google Maps Directions
+              </a>
+            </div>
           </div>
 
-          <div class="map-container" style="min-height: 260px;">
+          <div class="map-container" style="min-height: 280px;">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.418296338575!2d80.4343118!3d16.3067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a755d4b555555%3A0x6b77777777777777!2sAditya%20Medicare%20Hospitals!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
               allowfullscreen="" loading="lazy" title="Aditya Medicare Hospitals Guntur Location Map">
@@ -276,7 +287,8 @@
           </p>
           <div style="margin-top: 10px;">
             <a href="tel:0863294444" class="btn btn-danger" style="font-size: 0.85rem; padding: 8px 16px;">
-              📞 Emergency: 0863-294-4444
+              <svg class="btn-icon" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.03 21 3 13.97 3 5.48a1 1 0 011-1H7.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.27 1.11l-2.37 2.32z"/></svg>
+              Emergency: 0863-294-4444
             </a>
           </div>
         </div>
@@ -333,6 +345,17 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const contactForm = document.getElementById('contact-page-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('contact-name')?.value || 'Valued Patient';
+        showToast(`Thank you, ${name}! Your message has been sent successfully. Our team will contact you shortly.`);
+        contactForm.reset();
+      });
+    }
+  </script>
 </body>
 
 </html>

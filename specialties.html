@@ -27,22 +27,6 @@
 
 <body>
 
-  <!-- TOPBAR -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="topbar-info">
-        <div class="topbar-item">📍 <span>Kovelamudivari St, Suryaraopeta, Guntur, AP 522002</span></div>
-        <div class="topbar-item">⏰ <span>OPD Hours: Mon - Sat: 9:00 AM - 8:00 PM | Emergency: 24/7</span></div>
-      </div>
-      <div class="topbar-info">
-        <a href="tel:0863294444" class="emergency-pill">
-          <span class="pulse-dot"></span>
-          Emergency: 0863-294-4444
-        </a>
-      </div>
-    </div>
-  </div>
-
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="container nav-inner">
@@ -65,7 +49,10 @@
       </ul>
 
       <div class="nav-cta">
-        <a href="tel:0863294444" class="btn btn-danger">📞 Call Emergency</a>
+        <a href="tel:0863294444" class="btn btn-danger">
+          <svg class="btn-icon" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.03 21 3 13.97 3 5.48a1 1 0 011-1H7.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.27 1.11l-2.37 2.32z"/></svg>
+          Call Emergency
+        </a>
         <button class="btn btn-primary" data-open-modal="true">Book Appointment</button>
       </div>
 
@@ -94,7 +81,10 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px; padding-top: 20px;">
-      <a href="tel:0863294444" class="btn btn-danger" style="width:100%;">📞 Call 0863-294-4444</a>
+      <a href="tel:0863294444" class="btn btn-danger" style="width:100%;">
+        <svg class="btn-icon" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.03 21 3 13.97 3 5.48a1 1 0 011-1H7.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.27 1.11l-2.37 2.32z"/></svg>
+        Call 0863-294-4444
+      </a>
       <button class="btn btn-primary" style="width:100%;" data-open-modal="true">Book Appointment</button>
     </div>
   </div>
@@ -103,9 +93,9 @@
   <section class="section section-soft" style="padding: 50px 0 30px 0;">
     <div class="container">
       <div class="section-header" style="margin-bottom: 20px;">
-        <span class="section-tag">Comprehensive Healthcare</span>
-        <h1 class="section-title">Clinical Specialties & Departments</h1>
-        <p class="section-subtitle">Multidisciplinary super-speciality medical & surgical care in Guntur.</p>
+        <span class="section-tag">Centers of Excellence</span>
+        <h1 class="section-title">Medical Specialties & Clinical Services</h1>
+        <p class="section-subtitle">Comprehensive tertiary care across Cardiology, Orthopedics, Neurology, Gastroenterology, Urology & Pediatrics.</p>
       </div>
     </div>
   </section>
@@ -116,77 +106,58 @@
       <div class="specialties-grid">
         <div class="specialty-card">
           <div class="specialty-icon">🫀</div>
-          <h3 class="specialty-name">Cardiology & Cath Lab</h3>
-          <p class="specialty-desc">Full spectrum cardiac care including 24/7 primary angioplasty, flat-panel Cath Lab procedures, pacemaker implantation, Echo & stress test diagnostics.</p>
-          <button class="btn btn-primary" style="width: 100%; margin-top: 10px;" data-open-modal="true" data-department="Cardiology">Book Cardiology Consult</button>
+          <h3 class="specialty-name">Cardiology & Cardiac Surgery</h3>
+          <p class="specialty-desc">24/7 Flat-Panel Cath Lab, emergency primary angioplasty, pacemaker implantation, bypass surgery and non-invasive cardiac diagnostics.</p>
+          <button class="btn btn-secondary" data-open-modal="true" data-department="Cardiology">Book Cardiology OPD</button>
         </div>
 
         <div class="specialty-card">
           <div class="specialty-icon">🦴</div>
-          <h3 class="specialty-name">Orthopedics & Joint Surgery</h3>
-          <p class="specialty-desc">MISSO Robotic knee replacement, total hip replacement, arthroscopic ligament repairs, spine procedures & complex fracture trauma surgery.</p>
-          <button class="btn btn-primary" style="width: 100%; margin-top: 10px;" data-open-modal="true" data-department="Orthopedics">Book Orthopedic Consult</button>
+          <h3 class="specialty-name">Orthopedics & Joint Replacement</h3>
+          <p class="specialty-desc">MISSO Robotic knee surgery, hip replacement, arthroscopic ligament repairs, complex fracture fixation & spine care.</p>
+          <button class="btn btn-secondary" data-open-modal="true" data-department="Orthopedics">Book Ortho OPD</button>
         </div>
 
         <div class="specialty-card">
           <div class="specialty-icon">🧠</div>
           <h3 class="specialty-name">Neurology & Neurosurgery</h3>
-          <p class="specialty-desc">24/7 acute stroke intervention unit, brain tumor surgery, endoscopic spine surgery, epilepsy management & dedicated Neuro ICU.</p>
-          <button class="btn btn-primary" style="width: 100%; margin-top: 10px;" data-open-modal="true" data-department="Neurology">Book Neurology Consult</button>
+          <p class="specialty-desc">Comprehensive stroke emergency response, brain tumor excision, spine surgery, epilepsy & neuro intensive care.</p>
+          <button class="btn btn-secondary" data-open-modal="true" data-department="Neurology">Book Neuro OPD</button>
         </div>
 
         <div class="specialty-card">
           <div class="specialty-icon">🧬</div>
           <h3 class="specialty-name">Surgical Gastroenterology</h3>
-          <p class="specialty-desc">Laparoscopic abdominal surgery, advanced GI endoscopy, colonoscopy, ERCP, liver disease management & GI surgical oncology.</p>
-          <button class="btn btn-primary" style="width: 100%; margin-top: 10px;" data-open-modal="true" data-department="Gastroenterology">Book Gastro Consult</button>
+          <p class="specialty-desc">Advanced laparoscopic GI procedures, therapeutic endoscopy, colonoscopy, ERCP, liver & pancreatic surgery.</p>
+          <button class="btn btn-secondary" data-open-modal="true" data-department="Gastroenterology">Book Gastro OPD</button>
         </div>
 
         <div class="specialty-card">
           <div class="specialty-icon">🩺</div>
-          <h3 class="specialty-name">Urology & Endourology</h3>
-          <p class="specialty-desc">Laser treatment for kidney stones (RIRS/URSL), prostate enlargement treatment (TURP), reconstructive urology & male fertility care.</p>
-          <button class="btn btn-primary" style="width: 100%; margin-top: 10px;" data-open-modal="true" data-department="Urology">Book Urology Consult</button>
+          <h3 class="specialty-name">Urology & Andrology</h3>
+          <p class="specialty-desc">Laser kidney stone treatment (RIRS/URSL), prostate surgery, endourology, reconstructive urology & male fertility.</p>
+          <button class="btn btn-secondary" data-open-modal="true" data-department="Urology">Book Urology OPD</button>
         </div>
 
         <div class="specialty-card">
           <div class="specialty-icon">🫁</div>
-          <h3 class="specialty-name">Pulmonology & Sleep Medicine</h3>
-          <p class="specialty-desc">Asthma, COPD, lung infection treatment, diagnostic video bronchoscopy, sleep apnea diagnostics & respiratory critical care.</p>
-          <button class="btn btn-primary" style="width: 100%; margin-top: 10px;" data-open-modal="true" data-department="Pulmonology">Book Pulmonology Consult</button>
+          <h3 class="specialty-name">Pulmonology & Respiratory Care</h3>
+          <p class="specialty-desc">Asthma, COPD, bronchoscopy, sleep apnea diagnostic lab and advanced respiratory critical care.</p>
+          <button class="btn btn-secondary" data-open-modal="true" data-department="Pulmonology">Book Pulmonology OPD</button>
         </div>
 
         <div class="specialty-card">
           <div class="specialty-icon">👶</div>
           <h3 class="specialty-name">Pediatrics & Neonatology</h3>
-          <p class="specialty-desc">Level-III NICU & PICU for critical newborn care, childhood immunizations, growth monitoring & pediatric surgery support.</p>
-          <button class="btn btn-primary" style="width: 100%; margin-top: 10px;" data-open-modal="true" data-department="Pediatrics">Book Pediatric Consult</button>
+          <p class="specialty-desc">24/7 Level-III NICU & PICU, pediatric surgical care, child immunizations and newborn growth monitoring.</p>
+          <button class="btn btn-secondary" data-open-modal="true" data-department="Pediatrics">Book Pediatric OPD</button>
         </div>
 
         <div class="specialty-card">
           <div class="specialty-icon">🤱</div>
           <h3 class="specialty-name">Mother & Child Care</h3>
-          <p class="specialty-desc">High-risk obstetrics management, normal & painless delivery, laparoscopic gynecology, fertility care & maternity suite.</p>
-          <button class="btn btn-primary" style="width: 100%; margin-top: 10px;" data-open-modal="true" data-department="Mother & Child">Book Maternity Consult</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ROBOTIC SURGERY FEATURE -->
-  <section class="section section-soft">
-    <div class="container">
-      <div class="robotic-banner">
-        <div class="robotic-content">
-          <span class="section-tag" style="color: #8cd6ff;">Next-Gen Surgical Precision</span>
-          <h2>MISSO Robotic Joint Surgery</h2>
-          <p>
-            Aditya Medicare Hospitals offers advanced MISSO Robotic Knee Replacement for sub-millimeter anatomical accuracy, minimal bone resection, less pain, and faster recovery.
-          </p>
-          <button class="btn btn-secondary" data-open-modal="true" data-department="Orthopedics">Book Robotic Surgery Consult</button>
-        </div>
-        <div class="robotic-media">
-          <img src="images/misso-robot.jpg" alt="MISSO Robotic Joint Surgery" onerror="this.src='images/operation-theatre.png';" />
+          <p class="specialty-desc">High-risk obstetrics, painless labor delivery, laparoscopic gynecology, fertility workup & fetal medicine.</p>
+          <button class="btn btn-secondary" data-open-modal="true" data-department="Mother & Child">Book Maternity OPD</button>
         </div>
       </div>
     </div>
@@ -291,7 +262,8 @@
           </p>
           <div style="margin-top: 10px;">
             <a href="tel:0863294444" class="btn btn-danger" style="font-size: 0.85rem; padding: 8px 16px;">
-              📞 Emergency: 0863-294-4444
+              <svg class="btn-icon" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.03 21 3 13.97 3 5.48a1 1 0 011-1H7.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.27 1.11l-2.37 2.32z"/></svg>
+              Emergency: 0863-294-4444
             </a>
           </div>
         </div>
