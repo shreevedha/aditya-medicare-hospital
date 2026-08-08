@@ -1350,17 +1350,21 @@ button, input, select, textarea {
 }
 
 .contact-actions {
-  margin-top: 28px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .contact-actions .btn {
-  flex: 1 1 200px;
+  flex: 0 1 auto;
   justify-content: center;
   text-align: center;
+  border-radius: var(--radius-md);
+  padding: 12px 22px;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .map-container {
@@ -1779,6 +1783,8 @@ button, input, select, textarea {
 
   .contact-actions .btn {
     width: 100%;
+    border-radius: var(--radius-md);
+    padding: 13px 20px;
   }
 
   .map-container {
