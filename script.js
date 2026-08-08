@@ -585,9 +585,6 @@ function initDoctorFilters() {
 
   // Initial render of all doctors into grid
   filterDoctors();
-
-  // Initial render
-  renderDoctors(doctorsData);
 }
 
 /* --------------------------------------------------------------------------
