@@ -527,9 +527,6 @@ function initDoctorFilters() {
     searchInput.addEventListener('input', filterDoctors);
   }
 
-  // Initial render of all doctors into grid
-  filterDoctors();
-
   function renderDoctors(list) {
     if (list.length === 0) {
       doctorGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 50px 20px; background: #ffffff; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
@@ -585,6 +582,9 @@ function initDoctorFilters() {
 
     renderDoctors(filtered);
   }
+
+  // Initial render of all doctors into grid
+  filterDoctors();
 
   // Initial render
   renderDoctors(doctorsData);
