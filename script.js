@@ -538,23 +538,23 @@ function initDoctorFilters() {
     }
 
     doctorGrid.innerHTML = list.map(doc => `
-      <div class="doctor-card doctor-card-square">
-        <div class="doctor-card-top">
-          <div class="doctor-avatar-wrap">
+      <div class="doctor-card doctor-card-horizontal">
+        <div class="doctor-card-main">
+          <div class="doctor-photo-wrap">
             <img src="${doc.image}" alt="${doc.name}" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
-          </div>
-          <div class="doctor-top-meta">
-            <span class="doctor-dept-badge">${doc.department}</span>
             <span class="doctor-opd-badge"><span class="opd-dot"></span> OPD Mon - Sat</span>
           </div>
-        </div>
 
-        <div class="doctor-card-body">
-          <h3 class="doctor-name">${doc.name}</h3>
-          <div class="doctor-qualification">${doc.qualification}</div>
-          <div class="doctor-designation">${doc.designation}</div>
-          <div class="doctor-treatments">
-            ${doc.treatments.slice(0, 3).map(t => `<span class="treatment-tag">${t}</span>`).join('')}
+          <div class="doctor-details-wrap">
+            <div class="doctor-meta-header">
+              <span class="doctor-dept-badge">${doc.department}</span>
+            </div>
+            <h3 class="doctor-name">${doc.name}</h3>
+            <div class="doctor-qualification">${doc.qualification}</div>
+            <div class="doctor-designation">${doc.designation}</div>
+            <div class="doctor-treatments">
+              ${doc.treatments.slice(0, 3).map(t => `<span class="treatment-tag">${t}</span>`).join('')}
+            </div>
           </div>
         </div>
 

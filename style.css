@@ -849,15 +849,15 @@ button, input, select, textarea {
 
 .doctors-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
 }
 
-.doctor-card-square {
+.doctor-card-horizontal {
   background: var(--white);
   border-radius: 16px;
   border: 1px solid var(--border-color);
-  padding: 24px;
+  padding: 22px;
   box-shadow: 0 4px 16px rgba(9, 45, 116, 0.05);
   transition: var(--transition);
   display: flex;
@@ -865,10 +865,9 @@ button, input, select, textarea {
   justify-content: space-between;
   position: relative;
   overflow: hidden;
-  min-height: 330px;
 }
 
-.doctor-card-square::before {
+.doctor-card-horizontal::before {
   content: '';
   position: absolute;
   top: 0;
@@ -881,64 +880,86 @@ button, input, select, textarea {
   z-index: 5;
 }
 
-.doctor-card-square:hover {
-  transform: translateY(-6px);
+.doctor-card-horizontal:hover {
+  transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(9, 45, 116, 0.12);
   border-color: rgba(20, 85, 179, 0.3);
 }
 
-.doctor-card-square:hover::before {
+.doctor-card-horizontal:hover::before {
   opacity: 1;
 }
 
-.doctor-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 14px;
+.doctor-card-main {
+  display: grid;
+  grid-template-columns: 145px 1fr;
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 16px;
 }
 
-.doctor-avatar-wrap {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+.doctor-photo-wrap {
+  width: 145px;
+  height: 175px;
+  border-radius: 14px;
   overflow: hidden;
-  border: 3px solid var(--soft-bg);
-  box-shadow: 0 4px 12px rgba(9, 45, 116, 0.12);
-  flex-shrink: 0;
+  position: relative;
   background: linear-gradient(180deg, #f7f9fc 0%, #dbe4f0 100%);
-  transition: transform 0.3s ease;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(9, 45, 116, 0.08);
+  flex-shrink: 0;
 }
 
-.doctor-card-square:hover .doctor-avatar-wrap {
-  transform: scale(1.05);
-}
-
-.doctor-avatar-wrap img {
+.doctor-photo-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
+  transition: transform 0.3s ease;
 }
 
-.doctor-top-meta {
+.doctor-card-horizontal:hover .doctor-photo-wrap img {
+  transform: scale(1.05);
+}
+
+.doctor-photo-wrap .doctor-opd-badge {
+  position: absolute;
+  bottom: 8px;
+  left: 6px;
+  right: 6px;
+  justify-content: center;
+  background: rgba(9, 45, 116, 0.92);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-size: 0.68rem;
+  padding: 3px 6px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.doctor-details-wrap {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
+  min-width: 0;
+}
+
+.doctor-meta-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 8px;
 }
 
 .doctor-dept-badge {
   background: var(--navy);
   color: var(--white);
-  padding: 5px 14px;
+  padding: 4px 12px;
   border-radius: var(--radius-full);
   font-size: 0.76rem;
   font-weight: 700;
   font-family: 'Plus Jakarta Sans', sans-serif;
   letter-spacing: 0.02em;
-  box-shadow: 0 3px 8px rgba(9, 45, 116, 0.2);
+  box-shadow: 0 3px 8px rgba(9, 45, 116, 0.18);
   white-space: nowrap;
 }
 
@@ -952,7 +973,7 @@ button, input, select, textarea {
   font-family: 'Plus Jakarta Sans', sans-serif;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   border: 1px solid var(--border-color);
   white-space: nowrap;
 }
@@ -965,25 +986,18 @@ button, input, select, textarea {
   box-shadow: 0 0 6px #10b981;
 }
 
-.doctor-card-body {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  margin-bottom: 14px;
-}
-
 .doctor-name {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--navy);
   font-family: 'Plus Jakarta Sans', 'DM Sans', sans-serif;
   letter-spacing: -0.01em;
   margin-bottom: 4px;
-  line-height: 1.3;
+  line-height: 1.25;
 }
 
 .doctor-qualification {
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 600;
   color: var(--blue);
   font-family: 'Plus Jakarta Sans', 'DM Sans', sans-serif;
@@ -995,7 +1009,7 @@ button, input, select, textarea {
   font-size: 0.85rem;
   color: #475569;
   font-family: 'Plus Jakarta Sans', 'DM Sans', sans-serif;
-  line-height: 1.45;
+  line-height: 1.4;
   margin-bottom: 10px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -1006,8 +1020,7 @@ button, input, select, textarea {
 .doctor-treatments {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 2px;
+  gap: 5px;
 }
 
 .treatment-tag {
@@ -1016,7 +1029,7 @@ button, input, select, textarea {
   font-size: 0.74rem;
   font-weight: 600;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  padding: 4px 10px;
+  padding: 3px 9px;
   border-radius: 6px;
   border: 1px solid var(--border-color);
   white-space: nowrap;
@@ -1024,13 +1037,13 @@ button, input, select, textarea {
 
 .doctor-card-footer {
   margin-top: auto;
-  padding-top: 10px;
+  padding-top: 6px;
 }
 
 .doctor-card-action {
   width: 100%;
   padding: 12px 18px;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
   justify-content: center;
@@ -1751,9 +1764,24 @@ button, input, select, textarea {
     gap: 18px;
   }
 
-  .doctor-card-square {
-    padding: 20px;
-    min-height: auto;
+  .doctor-card-horizontal {
+    padding: 16px;
+  }
+
+  .doctor-card-main {
+    grid-template-columns: 110px 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .doctor-photo-wrap {
+    width: 110px;
+    height: 145px;
+    border-radius: 10px;
+  }
+
+  .doctor-name {
+    font-size: 1.08rem;
   }
 
   .contact-info-card {
