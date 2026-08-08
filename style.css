@@ -546,8 +546,8 @@ button, input, select, textarea {
 .hero-stats-wrapper {
   position: relative;
   z-index: 3;
-  margin-top: -60px;
-  margin-bottom: 60px;
+  margin-top: -50px;
+  margin-bottom: 40px;
 }
 
 .stats-grid {
@@ -1750,12 +1750,26 @@ button, input, select, textarea {
   }
 
   .hero-section {
-    padding: 50px 0 100px 0;
+    padding: 50px 0 60px 0;
+  }
+
+  .hero-stats-wrapper {
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 
   .stats-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
   }
 
   .stat-card::after {
