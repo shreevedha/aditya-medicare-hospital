@@ -1738,6 +1738,12 @@ button, input, select, textarea {
   
   .robotic-banner {
     grid-template-columns: 1fr;
+    padding: 30px 20px;
+    gap: 24px;
+  }
+
+  .robotic-media {
+    order: -1;
   }
   
   .contact-layout {
