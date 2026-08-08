@@ -853,6 +853,7 @@ button, input, select, textarea {
   gap: 26px;
 }
 
+.doctor-card,
 .doctor-card-horizontal {
   background: var(--white);
   border-radius: 16px;
@@ -867,6 +868,7 @@ button, input, select, textarea {
   overflow: hidden;
 }
 
+.doctor-card::before,
 .doctor-card-horizontal::before {
   content: '';
   position: absolute;
@@ -880,12 +882,14 @@ button, input, select, textarea {
   z-index: 5;
 }
 
+.doctor-card:hover,
 .doctor-card-horizontal:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(9, 45, 116, 0.12);
   border-color: rgba(20, 85, 179, 0.3);
 }
 
+.doctor-card:hover::before,
 .doctor-card-horizontal:hover::before {
   opacity: 1;
 }
