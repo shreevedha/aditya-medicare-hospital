@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ADITYA MEDICARE HOSPITALS - ORIGINAL BRAND COLOR SCHEME
+   ADITYA MEDICARE HOSPITALS - ORIGINAL BRAND COLOR SCHEME WITH HIGH-CONTRAST ICONS
    Theme: #092d74 Navy, #1455b3 Blue, #d42b2b Red, #eef2fa Soft Background
    ========================================================================== */
 
@@ -91,6 +91,15 @@ button, input, select, textarea {
   padding: 0 20px;
 }
 
+/* Inline SVG Icon Helper with Subtle Shadow */
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+}
+
 /* --------------------------------------------------------------------------
    EMERGENCY TOPBAR
    -------------------------------------------------------------------------- */
@@ -138,7 +147,7 @@ button, input, select, textarea {
 .emergency-pill {
   background: var(--red);
   color: var(--white) !important;
-  padding: 5px 16px;
+  padding: 6px 18px;
   border-radius: var(--radius-full);
   font-weight: 700;
   font-size: 0.85rem;
@@ -161,6 +170,7 @@ button, input, select, textarea {
   background-color: #ffffff;
   border-radius: 50%;
   display: inline-block;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
 /* --------------------------------------------------------------------------
@@ -316,14 +326,17 @@ button, input, select, textarea {
   transform: translateY(-2px);
 }
 
+/* Crisp Red Emergency Button with Pure White Icon Drop Shadow */
 .btn-danger {
   background: var(--red);
   color: var(--white) !important;
   box-shadow: 0 4px 14px rgba(212, 43, 43, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .btn-danger:hover {
   background: var(--red-hover);
+  box-shadow: 0 6px 18px rgba(212, 43, 43, 0.45);
   transform: translateY(-2px);
 }
 
