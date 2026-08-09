@@ -753,7 +753,7 @@ button, input, select, textarea {
 .specialties-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 24px;
   align-items: stretch;
 }
 
@@ -761,7 +761,7 @@ button, input, select, textarea {
   background: var(--white);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 20px 18px;
+  padding: 26px 22px;
   transition: var(--transition);
   display: flex;
   flex-direction: column;
@@ -2077,15 +2077,15 @@ button, input, select, textarea {
 @media (max-width: 640px) {
   .specialties-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 18px;
   }
 
   .specialty-card {
-    padding: 16px 14px;
+    padding: 22px 18px;
   }
 
   .specialty-icon {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 }
 
