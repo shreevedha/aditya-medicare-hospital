@@ -576,11 +576,10 @@ function initDoctorFilters() {
             <h3 class="doctor-name">${doc.name}</h3>
             <div class="doctor-qualification">${doc.qualification}</div>
             <div class="doctor-designation">${doc.designation}</div>
+            <div class="doctor-treatments">
+              ${doc.treatments.slice(0, 3).map(t => `<span class="treatment-tag">${t}</span>`).join('')}
+            </div>
           </div>
-        </div>
-
-        <div class="doctor-treatments doctor-treatments-fullwidth">
-          ${doc.treatments.slice(0, 3).map(t => `<span class="treatment-tag">${t}</span>`).join('')}
         </div>
 
         <div class="doctor-card-footer">

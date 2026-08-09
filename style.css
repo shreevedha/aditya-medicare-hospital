@@ -1119,15 +1119,9 @@ button, input, select, textarea {
 .doctor-treatments {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 5px;
   margin-top: auto;
   margin-bottom: 4px;
-}
-
-.doctor-treatments-fullwidth {
-  width: 100%;
-  margin-top: 8px;
-  margin-bottom: 10px;
 }
 
 .treatment-tag {
