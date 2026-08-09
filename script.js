@@ -564,6 +564,9 @@ function initDoctorFilters() {
             <div class="doctor-photo-wrap">
               <img src="${doc.image}" alt="${doc.name}" loading="lazy" onerror="this.src='images/doctor-placeholder.svg';" />
             </div>
+            <div class="doctor-opd-badge-below">
+              <span class="opd-dot"></span> OPD Mon - Sat
+            </div>
           </div>
 
           <div class="doctor-details-wrap">
@@ -580,9 +583,6 @@ function initDoctorFilters() {
         </div>
 
         <div class="doctor-card-footer">
-          <div class="doctor-opd-status-bar">
-            <span class="opd-dot"></span> OPD Mon &ndash; Sat
-          </div>
           <button class="btn btn-primary doctor-card-action" data-open-modal="true" data-doctor="${doc.name}" data-department="${doc.department}">
             <span>📅 Book Appointment</span>
           </button>
