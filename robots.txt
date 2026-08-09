@@ -4,6 +4,10 @@ Allow: /
 # Sitemap location
 Sitemap: https://www.adityamedicarehospitals.com/sitemap.xml
 
-# Block access to any admin or private files if added later
+# Crawl-delay optimization
+Crawl-delay: 1
+
+# Block non-essential directories
 Disallow: /admin/
 Disallow: /private/
+Disallow: /*.json$
