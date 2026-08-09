@@ -1633,7 +1633,7 @@ button, input, select, textarea {
 .footer {
   background: var(--navy-dark);
   color: #c4d7f5;
-  padding: 44px 0 20px 0;
+  padding: 32px 0 20px 0;
   border-top: 3px solid var(--blue);
   position: relative;
 }
@@ -1928,7 +1928,7 @@ button, input, select, textarea {
   }
 
   .footer {
-    padding: 28px 0 16px 0;
+    padding: 16px 0 14px 0;
   }
 
   .footer-grid {
