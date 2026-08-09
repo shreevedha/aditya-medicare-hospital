@@ -1091,9 +1091,8 @@ button, input, select, textarea {
   color: var(--navy);
   font-family: 'Plus Jakarta Sans', 'DM Sans', sans-serif;
   letter-spacing: -0.01em;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   line-height: 1.25;
-  min-height: 2.5em;
 }
 
 .doctor-qualification {
@@ -1101,17 +1100,16 @@ button, input, select, textarea {
   font-weight: 600;
   color: var(--blue);
   font-family: 'Plus Jakarta Sans', 'DM Sans', sans-serif;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   line-height: 1.25;
 }
 
 .doctor-designation {
-  font-size: 0.76rem;
+  font-size: 0.79rem;
   color: #475569;
   font-family: 'Plus Jakarta Sans', 'DM Sans', sans-serif;
   line-height: 1.35;
   margin-bottom: 6px;
-  min-height: 2.7em;
   display: block;
 }
 
@@ -1119,8 +1117,7 @@ button, input, select, textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  min-height: 52px;
-  margin-top: auto;
+  margin-top: 4px;
   margin-bottom: 4px;
 }
 
