@@ -991,10 +991,8 @@ button, input, select, textarea {
 
 .doctor-photo-wrap {
   width: 100%;
-  height: 160px;
-  min-height: 160px;
-  max-height: 160px;
-  flex: 0 0 160px;
+  flex: 1;
+  min-height: 155px;
   border-radius: 12px;
   overflow: hidden;
   position: relative;
