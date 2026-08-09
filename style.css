@@ -986,13 +986,14 @@ button, input, select, textarea {
   gap: 6px;
   width: 125px;
   flex-shrink: 0;
-  height: 100%;
 }
 
 .doctor-photo-wrap {
-  width: 100%;
-  flex: 1;
-  min-height: 155px;
+  width: 125px;
+  height: 180px;
+  min-height: 180px;
+  max-height: 180px;
+  flex: 0 0 180px;
   border-radius: 12px;
   overflow: hidden;
   position: relative;
@@ -1092,6 +1093,7 @@ button, input, select, textarea {
   letter-spacing: -0.01em;
   margin-bottom: 3px;
   line-height: 1.25;
+  min-height: 2.5em;
 }
 
 .doctor-qualification {
@@ -1109,6 +1111,7 @@ button, input, select, textarea {
   font-family: 'Plus Jakarta Sans', 'DM Sans', sans-serif;
   line-height: 1.35;
   margin-bottom: 6px;
+  min-height: 2.7em;
   display: block;
 }
 
@@ -1116,6 +1119,7 @@ button, input, select, textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+  min-height: 52px;
   margin-top: auto;
   margin-bottom: 4px;
 }
