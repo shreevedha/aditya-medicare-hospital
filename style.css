@@ -668,11 +668,7 @@ button, input, select, textarea {
    SUBPAGE TOP HERO HEADING SECTION (Right after main nav header)
    -------------------------------------------------------------------------- */
 .subpage-hero-banner {
-  min-height: 240px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 36px 0 !important;
+  padding: 64px 0 !important;
   background-color: var(--soft-bg);
   border-bottom: 1px solid var(--border-color);
 }
@@ -687,8 +683,7 @@ button, input, select, textarea {
 
 @media (max-width: 768px) {
   .subpage-hero-banner {
-    min-height: 210px;
-    padding: 24px 0 !important;
+    padding: 48px 0 !important;
   }
 }
 
