@@ -727,8 +727,8 @@ button, input, select, textarea {
    -------------------------------------------------------------------------- */
 .specialties-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
   align-items: stretch;
 }
 
@@ -736,13 +736,10 @@ button, input, select, textarea {
   background: var(--white);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 24px 22px;
+  padding: 20px 18px;
   transition: var(--transition);
-  display: grid;
-  grid-template-columns: 48px 1fr;
-  grid-template-rows: auto 1fr auto;
-  column-gap: 16px;
-  row-gap: 4px;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   position: relative;
   overflow: hidden;
@@ -761,7 +758,7 @@ button, input, select, textarea {
 }
 
 .specialty-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
   border-color: transparent;
 }
@@ -770,47 +767,45 @@ button, input, select, textarea {
   opacity: 1;
 }
 
+.specialty-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
 .specialty-icon {
-  grid-column: 1;
-  grid-row: 1 / 4;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
+  line-height: 1;
+  flex-shrink: 0;
   margin-bottom: 0;
-  align-self: start;
 }
 
 .specialty-name {
-  grid-column: 2;
-  grid-row: 1;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
   color: var(--navy);
-  margin-bottom: 6px;
+  margin-bottom: 0;
   line-height: 1.25;
 }
 
 .specialty-desc {
-  grid-column: 2;
-  grid-row: 2;
   font-size: 0.88rem;
   color: var(--text-muted);
-  margin-bottom: 14px;
   line-height: 1.5;
+  margin-bottom: 14px;
+  flex: 1 1 auto;
 }
 
+.specialty-card .btn,
 .specialty-link {
-  grid-column: 2;
-  grid-row: 3;
-  font-weight: 700;
-  font-size: 0.88rem;
-  color: var(--blue);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
   margin-top: auto;
-}
-
-.specialty-link:hover {
-  color: var(--navy);
-  gap: 10px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  padding: 10px 16px;
+  font-size: 0.88rem;
+  font-weight: 700;
 }
 
 /* --------------------------------------------------------------------------
@@ -2060,13 +2055,11 @@ button, input, select, textarea {
   }
 
   .specialty-card {
-    padding: 18px 16px;
-    grid-template-columns: 40px 1fr;
-    column-gap: 12px;
+    padding: 16px 14px;
   }
 
   .specialty-icon {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
