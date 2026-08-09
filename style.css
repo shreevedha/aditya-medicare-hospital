@@ -147,11 +147,14 @@ button, input, select, textarea {
 }
 
 .nav-inner {
-  height: 84px;
+  height: 88px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  box-sizing: border-box;
 }
 
 .brand {
@@ -159,6 +162,7 @@ button, input, select, textarea {
   align-items: center;
   gap: 14px;
   text-decoration: none;
+  padding-top: 4px;
 }
 
 .brand-logo {
@@ -175,6 +179,7 @@ button, input, select, textarea {
 .brand-text {
   display: flex;
   flex-direction: column;
+  padding-top: 2px;
 }
 
 .brand-title {
@@ -182,7 +187,8 @@ button, input, select, textarea {
   font-size: 1.35rem;
   font-weight: 800;
   color: var(--navy);
-  line-height: 1.1;
+  line-height: 1.15;
+  margin-top: 2px;
 }
 
 .brand-subtitle {
@@ -1852,7 +1858,10 @@ button, input, select, textarea {
 
 @media (max-width: 768px) {
   .nav-inner {
-    height: 74px;
+    height: 78px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    box-sizing: border-box;
   }
 
   .brand-logo {
