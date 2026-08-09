@@ -1678,7 +1678,7 @@ button, input, select, textarea {
   font-size: 0.85rem;
   line-height: 1.45;
   color: #a4c2ed;
-  max-width: 320px;
+  max-width: 100%;
 }
 
 .footer-emergency-btn {
