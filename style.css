@@ -1679,6 +1679,7 @@ button, input, select, textarea {
   line-height: 1.45;
   color: #a4c2ed;
   max-width: 100%;
+  text-align: justify;
 }
 
 .footer-emergency-btn {
